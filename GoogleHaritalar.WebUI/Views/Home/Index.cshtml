@@ -1,0 +1,18 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<form name="harita" method="post">
+    <input name="submit" type="button" id="btnYolOlustur" value="Yol Haritasını Göster" class="btn btn-default" onclick="YolTarifi(markers)" />
+    <input type="button" value="Son İşareti Kaldır" class="btn btn-default" onclick="deleteLastMarkers()" /><br /><br />
+    <label style="font-weight:bold">Gidiş tipini seçin : </label>
+    <select id="slcGidisTipi" class="dropdown">
+        <option value="DRIVING">Arabayla</option>
+        <option value="WALKING">Yürüyerek</option>
+        <option value="CYCLING">Bisikletle</option>
+        <option value="TRANSIT">Toplu Taşımayla</option>
+    </select>
+    <div id="directions"></div>
+</form>
